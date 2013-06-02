@@ -1,4 +1,9 @@
-var arrayReleituras=[{id:"sessao5",titulo:"Sessão 5",descricao:"A quinta releitura levou-nos à Tipografia Camões",img:"img/sessao5.png"},{id:"sessao4",titulo:"Sessão 4",descricao:"A revolução de Abril",img:"img/sessao4.png"},{id:"sessao3",titulo:"Sessão 3",descricao:"O soneto e o som",img:"img/sessao3.png"}]
+var arrayReleituras=[
+{id:"sessao5",titulo:"5",descricao:"A quinta releitura levou-nos à Tipografia Camões",img:"img/sessao5.png"},
+{id:"sessao4",titulo:"4",descricao:"A revolução de Abril",img:"img/sessao4.png"},
+{id:"sessao3",titulo:"3",descricao:"O soneto e o som",img:"img/sessao3.png"},
+{id:"sessao2",titulo:"2",descricao:"O Tempo: eu tenho que inventar coisas para escrever aqui",img:"img/sessao2.png"},
+{id:"sessao1",titulo:"1",descricao:"Aquela sessão que não correu lá muito bem",img:"img/sessao1.png"}]
 
 $("body").css({width:(arrayReleituras.length*300)+"px"});
 $("html").css({width:(arrayReleituras.length*300)+"px"});
@@ -10,3 +15,17 @@ for (var i = 0; i < arrayReleituras.length; i++) {
 	 $('#'+arrayReleituras[i].id).css({"background-image":"url('"+arrayReleituras[i].img+"')"});
 
 };
+
+$(".rect").on("mouseover",funcao);
+
+
+
+function funcao(data){
+
+	//Torna todas as divs rect um pouco transparentes
+	$(".rect").css({"opacity":0.5,"box-shadow":""});
+
+	//Torna a div sobre a qual o rato está sobre totalmente opaca
+	$("#"+data.currentTarget.id).css({"opacity":1,"box-shadow":"inset 0 0 10px #000"});
+
+}

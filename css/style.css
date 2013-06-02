@@ -1,21 +1,54 @@
 html,body{
   height: 100%;
-  background: #444444; /* Old browsers */
+  background: #000; /* Old browsers */
   z-index: 0;
   position:absolute;
   /* Este valor tem que ser dado dianmicamente pelo javascript - width dos divs rects * 9(numero de divs rect)  */
   width: 1800px;
 }
 
+header{
+  z-index: 2;
+  position:fixed;
+  height: 50px;
+
+}
+
+header a{
+    position: relative;
+    top:15px;
+    font-size: 20px;
+    padding-right: 60px;
+}
+
 nav{
-  background: #000; /* Old browsers */
+  background-color: rgba(0, 0, 0, 0.8);
   position:fixed;
   height: 50px;
   z-index: 1;
   width: 100%;
   clear:both;
+  box-shadow: 0px 4px 8px #000;
+  text-align: center;
+}
+
+nav a{
+  position: relative;
+    top:15px;
+    font-size: 20px;
+    padding-right: 60px;
 
 }
+a:visited,a:link{
+  color:white;
+  text-decoration: none;
+}
+
+a:link:hover,a:visited:hover{
+  color:red;
+  text-decoration: none;
+}
+
 
 #float{
   position:absolute;
@@ -24,33 +57,37 @@ nav{
 
 .rect{
   position:relative;
-  background-color: red;
   width: 300px;
   height:100%;
   float:left;
-  display:block;  
+  display:block;
+  opacity: 0.5;  
 }
 
 h3.titulo{
   position: relative;
-  top:20%;
-  right:0%;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
+  top:15px;
+  right:67px;
+  color: rgba(255, 255, 255, 0.9);
   float:right;
-  font-size: 22px;
-  padding: 3px 10px;
-  padding-right: 40px;
+  font-size: 140px;
+  text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 0px;
+
 }
 
 p.descricao{
   position: relative;
   top:60%;
   right:0%;
-  max-width:75%;
+  max-width:65%;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
   float:left;
   font-size: 24px;
+  line-height:110%;
   padding: 10px 10px;
+  padding-left: 40px;
+  box-shadow: 2px 2px 10px #000;
+
 }

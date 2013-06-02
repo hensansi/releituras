@@ -1,0 +1,42 @@
+html,body{
+  width:100%;
+  height: 100%;
+  background: #444444; /* Old browsers */
+  z-index: 0;
+  position:fixed;
+
+
+}
+
+nav{
+  background: #000; /* Old browsers */
+  position:fixed;
+  height: 30px;
+  z-index: 1;
+  width: 100%;
+  clear:both;
+
+}
+
+#float{
+  position:absolute;
+  width: 100%;
+  height: 100%
+}
+
+.rect{
+  position:relative;
+  background-color: red;
+  width: 200px;
+  height:100%;
+  float:left;
+  clear:both;
+
+}
+
+#rect2{
+  background-color: green;
+  
+
+
+}

@@ -68,12 +68,12 @@ a:link:hover,a:visited:hover{
 
 h3.titulo{
   position: relative;
-  top:15px;
-  right:67px;
-  color: rgba(255, 255, 255, 0.9);
+  top:35px;
+  right:48px;
+  color: rgba(220, 220, 220, 0.3);
   float:right;
-  font-size: 140px;
-  text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 100px;
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
   width: 0px;
 
 }

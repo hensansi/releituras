@@ -5,8 +5,6 @@ html,body{
   position:absolute;
   /* Este valor tem que ser dado dianmicamente pelo javascript - width dos divs rects * 9(numero de divs rect)  */
   width: 1800px;
-
-
 }
 
 nav{

@@ -19,7 +19,7 @@ header a{
     top:20px;
     left:20px;
     font-size: 12px;
-    padding-right: 60px;
+    margin-right: 60px;
 }
 
 nav{
@@ -37,7 +37,7 @@ nav a{
   position: relative;
     top:15px;
     font-size: 20px;
-    padding-right: 60px;
+    margin-right: 60px;
 
 }
 a:visited,a:link{

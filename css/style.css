@@ -38,7 +38,8 @@ nav a{
   position: relative;
     top:15px;
     font-size: 20px;
-    margin-right: 60px;
+    margin-right: 30px;
+    margin-left: 30px;
 
 }
 a:visited,a:link{
@@ -78,10 +79,28 @@ h3.titulo{
 
 }
 
+h3.artistas{
+  position: relative;
+  top:200px;
+  right:0px;
+  color: white;
+  float:right;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  line-height:110%;
+  box-shadow: 2px 2px 10px #000;
+  width: 35%;
+  padding: 10px 10px;
+
+
+}
+
+
 p.descricao{
   position: relative;
   top:60%;
-  right:0%;
+  right:0px;
   max-width:65%;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);

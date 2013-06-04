@@ -147,7 +147,7 @@ p.descricao{
   font-weight: bold;
   background-color: rgba(0, 0, 0, 1);
   padding-left: 20px;
-
+  margin-right: 16%;
 
 
 }
@@ -170,9 +170,14 @@ p.descricao{
   line-height:110%;
   position:relative;
   margin-left: 16%;
+
+
   margin-bottom: 60px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.9);
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img{

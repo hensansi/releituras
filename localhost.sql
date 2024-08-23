@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `obrigatorionaover`
 --
-CREATE DATABASE `obrigatorionaover` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `obrigatorionaover` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `obrigatorionaover`;
 
 -- --------------------------------------------------------

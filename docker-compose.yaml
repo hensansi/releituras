@@ -1,0 +1,30 @@
+services:
+  web:
+    build: "."
+    ports:
+      - "8000:80"
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USER=connect
+      - DATABASE_PASSWORD=connect
+      - DATABASE_NAME=obrigatorionaover
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mariadb:5.5
+    volumes:
+      - ./localhost.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_USER=connect
+      - MYSQL_PASSWORD=connect
+      - MYSQL_DATABASE=obrigatorionaover
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

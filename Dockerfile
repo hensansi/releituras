@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:5.6.40-apache
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Replace repos in archive as release is EOL

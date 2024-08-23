@@ -1,3 +1,0 @@
-Apache ver.	2.2.19 (Unix)
-PHP version	5.2.*
-MySQL ver.	5.1

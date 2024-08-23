@@ -3,6 +3,8 @@ services:
     build: "."
     ports:
       - "8000:80"
+    #volumes:
+    #  - ./:/var/www/html
     environment:
       - DATABASE_HOST=db
       - DATABASE_USER=connect

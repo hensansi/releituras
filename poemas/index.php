@@ -39,9 +39,9 @@
         $stmt = $db->query('SELECT * FROM autores ORDER BY nome ASC');
         
         
-
+        
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-          echo '<div  style="background-image:url('."../img/autores/".$row["id"]."_m.jpg".')" class="rect sessao" id=autor'.$row["id"].'>'.'<p class="descricao">'.$row["nome"].'</p>'.'</div>';
+          echo "<a href=/poemas/?id=".$row["id"].">".'<div  style="background-image:url('."../img/autores/".$row["id"]."_m.jpg".')" class="rect sessao" id=autor'.$row["id"].'>'.'<p class="descricao">'.$row["nome"].'</p>'.'</div>';
         }
         } catch(PDOException $ex) {
             echo "An Error occured!"; //user friendly message

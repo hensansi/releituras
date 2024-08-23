@@ -2,7 +2,6 @@
 
 ## About
 
-## TODO
+## Archival
 
--   Archive Docker Image
--   Archive all the files and resources that might disappear
+Some changes where made to make the project static. This will ensure that the project lives on and doesn't waste too many resources.

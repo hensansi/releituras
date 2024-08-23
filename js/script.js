@@ -22,19 +22,18 @@ var idx=$("html").attr('id');
 
 $(".rect").on("mouseover",transp);
 
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
+const leituraId = parseInt(params.get("leituraId"));
 
-if (idx=="releituras"){
-	$(".sessao").on("click",sessao);
-
-}
-else if (idx=="poemas"){
-		$(".sessao").on("click",autor);
-
-}
-else if (idx=="leitores"){
-		$(".sessao").on("click",leitores);
-
-
+if (leituraId) {
+    leitura(leituraId);
+} else if (id && idx == "releituras") {
+    sessao(id);
+} else if (id && idx == "poemas") {
+    autor(id);
+} else if (id && idx == "leitores") {
+    leitores(id);
 }
 
 
@@ -54,9 +53,7 @@ function transp(data){
 	$(id).css({"opacity":1,"box-shadow":"inset 0 0 10px #000"});
 }
 
-function sessao(data){
-	var idx=data.currentTarget.id.slice(6);
-
+function sessao(idx){
 	$("#float").html("");
 
 	$.get("/php/sessao.php?id="+idx).done(function(data) {
@@ -69,14 +66,11 @@ function sessao(data){
 		$("html").css({width:(n*300)+"px"});
 
 		$(".rect").on("mouseover",transp);
-		$(".leitura").on("click",leitura);
 	});
 }
 
 
-function autor(data){
-	var idx=data.currentTarget.id.slice(5);
-
+function autor(idx){
 	$("body").css({width:"100%"});
 	$("html").css({width:"100%"});
 
@@ -121,9 +115,7 @@ function autor(data){
 	});
 }
 
-function leitores(data){
-	var idx=data.currentTarget.id.slice(6);
-
+function leitores(idx){
 	$("body").css({width:"100%"});
 	$("html").css({width:"100%"});
 
@@ -136,9 +128,7 @@ function leitores(data){
 }
 
 
-function leitura(data){
-
-	var idx=data.currentTarget.id.slice(7);
+function leitura(idx){
 
 
 	$("body").css({width:"100%"});

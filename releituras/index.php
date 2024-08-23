@@ -33,9 +33,9 @@
         
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-          echo '<div  style="background-image:url('."../img/sessao/".$row["id"]."_m.jpg".')" class="rect sessao" id=sessao'.$row["id"].'>'
+          echo "<a href=/releituras/?id=".$row["id"].">".'<div  style="background-image:url('."../img/sessao/".$row["id"]."_m.jpg".')" class="rect sessao" id=sessao'.$row["id"].'>'
           .'<h3 class="titulo">'.$row["numero_sessao"].'</h3>'
-          .'<p class="descricao">'.$row["descricao"].'</p>'.'</div>';
+          .'<p class="descricao">'.$row["descricao"].'</p>'.'</div></a>';
         }
         } catch(PDOException $ex) {
             echo "An Error occured!"; //user friendly message

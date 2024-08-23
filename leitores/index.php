@@ -36,7 +36,7 @@
         
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-          echo '<div  style="background-image:url('."../img/leitores/".$row["id"]."_m.jpg".')" class="rect sessao" id=leitor'.$row["id"].'>'.'<p class="descricao">'.$row["nome"].'</p>'.'</div>';
+          echo "<a href=/leitores/?id=".$row["id"].">".'<div  style="background-image:url('."../img/leitores/".$row["id"]."_m.jpg".')" class="rect sessao" id=leitor'.$row["id"].'>'.'<p class="descricao">'.$row["nome"].'</p>'.'</div></a>';
         }
         } catch(PDOException $ex) {
             echo "An Error occured!"; //user friendly message
